@@ -1,6 +1,17 @@
 package org.velvet;
+
+import org.velvet.gui.login.LoginFrame;
+
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+
 public class Main {
-    static void main() {
-        IO.println("Hello and welcome!");
+    public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ignored) {
+        }
+
+        SwingUtilities.invokeLater(() -> new LoginFrame().setVisible(true));
     }
 }
