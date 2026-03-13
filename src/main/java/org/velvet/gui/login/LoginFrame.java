@@ -58,9 +58,12 @@ public class LoginFrame extends JFrame {
         loginButton.addActionListener(e -> performLogin());
         registerButton.addActionListener(e -> showRegisterDialog());
 
+        // --- ADD THIS ONE LINE ---
+        // This makes pressing "Enter" anywhere in the window trigger the loginButton
+        getRootPane().setDefaultButton(loginButton);
+
         setContentPane(root);
     }
-
     private void performLogin() {
         try {
             User user = AppContext.LOGIN_CONTROLLER.login(usernameField.getText(), new String(passwordField.getPassword()));
@@ -69,9 +72,8 @@ public class LoginFrame extends JFrame {
         } catch (InvalidLoginException e) {
             GuiUtil.showError(this, e);
         }
-    }
-
-    private void showRegisterDialog() {
+    }private void showRegisterDialog() {
+        // 1. Declare components outside the loop so they retain user input on error
         JTextField name = new JTextField();
         JTextField username = new JTextField();
         JPasswordField password = new JPasswordField();
@@ -90,23 +92,33 @@ public class LoginFrame extends JFrame {
         panel.add(new JLabel("Email:"));
         panel.add(email);
 
-        int option = JOptionPane.showConfirmDialog(this, panel, "Customer Registration",
-                JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
-        if (option != JOptionPane.OK_OPTION) {
-            return;
-        }
+        // 2. Wrap the dialog in a loop
+        while (true) {
+            int option = JOptionPane.showConfirmDialog(this, panel, "Customer Registration",
+                    JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
-        try {
-            Customer customer = AppContext.LOGIN_CONTROLLER.registerCustomer(
-                    name.getText(),
-                    username.getText(),
-                    new String(password.getPassword()),
-                    phone.getText(),
-                    email.getText()
-            );
-            GuiUtil.showInfo(this, "Registration successful. Your customer ID is " + customer.getId());
-        } catch (Exception ex) {
-            GuiUtil.showError(this, ex);
+            // If user clicks Cancel or the X button, exit the loop and method
+            if (option != JOptionPane.OK_OPTION) {
+                return;
+            }
+
+            try {
+                Customer customer = AppContext.LOGIN_CONTROLLER.registerCustomer(
+                        name.getText(),
+                        username.getText(),
+                        new String(password.getPassword()),
+                        phone.getText(),
+                        email.getText()
+                );
+                GuiUtil.showInfo(this, "Registration successful. Your customer ID is " + customer.getId());
+
+                // 3. Break out of the loop because registration was successful
+                break;
+
+            } catch (Exception ex) {
+                // Show the error. The loop will restart and show the dialog again.
+                GuiUtil.showError(this, ex);
+            }
         }
     }
 
