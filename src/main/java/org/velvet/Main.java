@@ -11,7 +11,6 @@ public class Main {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception ignored) {
         }
-
         SwingUtilities.invokeLater(() -> new LoginFrame().setVisible(true));
     }
 }
