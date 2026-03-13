@@ -1,4 +1,4 @@
-package org.velvet.model.controller;
+package org.velvet.controller;
 
 import org.velvet.exception.BookingNotAllowedException;
 import org.velvet.exception.PaymentFailedException;
