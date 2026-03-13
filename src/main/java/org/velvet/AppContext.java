@@ -1,10 +1,10 @@
 package org.velvet;
 
-import org.velvet.model.controller.AdminController;
-import org.velvet.model.controller.CustomerController;
-import org.velvet.model.controller.LoginController;
-import org.velvet.model.controller.ManagerController;
-import org.velvet.model.controller.SchedulerController;
+import org.velvet.controller.AdminController;
+import org.velvet.controller.CustomerController;
+import org.velvet.controller.LoginController;
+import org.velvet.controller.ManagerController;
+import org.velvet.controller.SchedulerController;
 import org.velvet.model.service.BookingService;
 import org.velvet.model.service.HallService;
 import org.velvet.model.service.IssueService;
