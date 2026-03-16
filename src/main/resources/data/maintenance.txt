@@ -1,1 +1,2 @@
 MTN-20260304120757-5678|HAL-001|Grand Auditorium|2026-03-10 09:00|2026-03-11 09:00|expand the hall|SCH-001
+MTN-20260313211132-6555|HAL-002|Royal Banquet|2026-05-20 08:00|2026-05-25 08:00|maintaing proper sanitation and cleanness|SCH-001

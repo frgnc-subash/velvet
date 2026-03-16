@@ -1,3 +1,3 @@
-HAL-001|Auditorium|Grand Auditorium|1000|300.0|2026-03-05 08:00|2026-05-05 08:00|Available for conferences.|ACTIVE
-HAL-002|Banquet Hall|Royal Banquet|300|100.0|2026-03-05 08:00|2026-03-05 18:00|Available for weddings.|ACTIVE
-HAL-003|Meeting Room|Meeting Room A|30|50.0|2026-03-05 08:00|2026-03-05 18:00|Available for meetings.|ACTIVE
+HAL-001|Auditorium|Grand Auditorium|1000|300.0|2026-05-05 08:00|2026-06-05 08:00|Available for conferences.|ACTIVE
+HAL-002|Banquet Hall|Royal Banquet|300|100.0|2026-05-05 08:00|2026-07-05 18:00|Available for weddings.|ACTIVE
+HAL-20260313210242-5983|Meeting Room|Meeting Room B|30|50.0|2026-05-09 08:00|2026-05-10 08:00|Available for meetings|ACTIVE

@@ -1,4 +1,4 @@
-package org.velvet.model.controller;
+package org.velvet.controller;
 
 import org.velvet.exception.InvalidLoginException;
 import org.velvet.model.service.UserService;

@@ -1,4 +1,4 @@
-package org.velvet.model.controller;
+package org.velvet.controller;
 
 import org.velvet.model.booking.Booking;
 import org.velvet.model.issue.Issue;

@@ -3,4 +3,3 @@ SCH-001|Main Scheduler|scheduler|scheduler123|SCHEDULER|+60110000002|scheduler@v
 MGR-001|Operations Manager|manager|manager123|MANAGER|+60110000003|manager@velvet.com|false
 CUS-001|Sample Customer|customer|customer123|CUSTOMER|+60110000004|customer@velvet.com|false
 CUS-20260304115910-9875|subash|sub|123456|CUSTOMER|+9771234567890|subash@gmail.com|false
-CUS-20260308101115-9463|riya|riya|123456|CUSTOMER|9849349481|abcd@gmail.com|false
